@@ -82,7 +82,8 @@ export class EditQuestionsComponent {
       const response = await this.http
         .post('https://iu-quiz-ki0i.onrender.com/posts/newQuestion', item)
         .toPromise();
-      window.location.reload();
+    this.router.navigate(['/fragenbearbeiten', this.category]);
+  }
     } else {
       alert('Bitte alle Felder korrekt ausfüllen!');
     }
@@ -96,7 +97,7 @@ export class EditQuestionsComponent {
       const response = await this.http
         .put(`https://iu-quiz-ki0i.onrender.com/posts/update/${_id}`, item)
         .toPromise();
-      window.location.reload();
+      this.router.navigate(['/fragenbearbeiten', this.category]);
     } else {
       alert('Bitte alle Felder korrekt ausfüllen!');
     }
@@ -108,7 +109,7 @@ export class EditQuestionsComponent {
     const response = await this.http
       .delete(`https://iu-quiz-ki0i.onrender.com/posts/delete/${_id}`)
       .toPromise();
-    window.location.reload();
+    this.router.navigate(['/fragenbearbeiten', this.category]);
   }
 
   eingabePruefen(item: any): boolean {
