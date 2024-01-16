@@ -22,6 +22,9 @@ export class GlobalHeaderComponent {
     this.router.navigate(['/fragenkatalog']);
   }
 
+  navigateHome(){
+    this.router.navigate(['/home']);
+
   abmelden(){
     localStorage.removeItem('jwtToken');
     localStorage.removeItem('userId');
