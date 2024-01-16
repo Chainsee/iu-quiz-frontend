@@ -16,7 +16,7 @@ export class AuthGuard implements CanActivate {
     if (jwtToken) {
       console.log(`Sending request with JWT token: ${jwtToken}`);
       return from(
-        fetch(''https://iu-quiz-ki0i.onrender.com/posts/validate', {
+        fetch('https://iu-quiz-ki0i.onrender.com/posts/validate', {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
           },
