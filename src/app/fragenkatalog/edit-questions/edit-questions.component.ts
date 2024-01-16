@@ -83,7 +83,6 @@ export class EditQuestionsComponent {
         .post('https://iu-quiz-ki0i.onrender.com/posts/newQuestion', item)
         .toPromise();
     this.router.navigate(['/fragenbearbeiten', this.category]);
-  }
     } else {
       alert('Bitte alle Felder korrekt ausfüllen!');
     }
