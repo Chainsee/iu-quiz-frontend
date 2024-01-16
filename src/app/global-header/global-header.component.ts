@@ -24,6 +24,7 @@ export class GlobalHeaderComponent {
 
   navigateHome(){
     this.router.navigate(['/home']);
+  }
 
   abmelden(){
     localStorage.removeItem('jwtToken');
