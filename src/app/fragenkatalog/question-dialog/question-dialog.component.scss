@@ -1,0 +1,43 @@
+$var : 100vw;
+
+.dialog{
+  width: calc($var/5);
+  height: calc($var/10);
+  margin: calc($var/40);
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc($var/90);
+}
+
+.score{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc($var/100);
+}
+
+form{
+  display: flex;
+  margin: calc($var/70);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttonPanel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeButton{
+  margin: calc($var/60);
+  width: calc($var/20);
+  height: calc($var/40);
+  border-radius: 5px;
+  font-size: calc($var/110);
+}

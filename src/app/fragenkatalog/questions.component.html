@@ -1,0 +1,41 @@
+<app-global-header></app-global-header>
+<div class="panel">
+  <h1 class="text">Fragenkatalog bearbeiten</h1>
+  <div class="buttonPanel">
+    <button class="button" (click)="addCategory()">Kategorie erstellen</button
+    ><button class="button" (click)="selectCategory()">
+      Kategorie bearbeiten
+    </button>
+  </div>
+</div>
+<div class="panel">
+  <p class="explanation">Fragen per CSV import hinzufügen</p>
+  <p class="explanation2">Die erste Zeile muss wie folgt aussehen:</p>
+  <div class = "buttonPanel">
+    <button class ="button" *ngIf="items.length != 0" (click)="speichern()">Fragen hinzufügen</button>
+  </div>
+  <br/>
+  <div class="table">
+    <table>
+      <tr>
+        <th>kategorie</th>
+        <th>frage</th>
+        <th>antwort1</th>
+        <th>antwort2</th>
+        <th>antwort3</th>
+        <th>antwort4</th>
+        <th>korrekteAntwort</th>
+      </tr>
+      <tr *ngFor="let item of items">
+        <td>{{ item.kategorie }}</td>
+        <td>{{ item.frage }}</td>
+        <td>{{ item.antworten.antwort1 }}</td>
+        <td>{{ item.antworten.antwort2 }}</td>
+        <td>{{ item.antworten.antwort3 }}</td>
+        <td>{{ item.antworten.antwort4 }}</td>
+        <td>{{ item.korrekteAntwort }}</td>
+      </tr>
+    </table>
+  </div>
+  <input class ="input" type="file" (change)="onFileSelect($event)" />
+</div>

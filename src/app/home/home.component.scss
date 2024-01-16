@@ -1,0 +1,40 @@
+$black-color: #000000;
+$purple-color: #6c63ff;
+$white-color: #ffffff;
+$green-color: #2fab73;
+
+.headline {
+  padding-left: 2rem;
+  padding-top: 6rem;
+  font-size: 2rem;
+  font-weight: 1000;
+  font-family: "Roboto", sans-serif;
+  color: $black-color;
+  display: flex;
+  justify-content: center;
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.Playmodus {
+  padding: 2rem;
+  margin: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  width: 30%;
+  height: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: $purple-color;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

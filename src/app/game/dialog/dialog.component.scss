@@ -1,0 +1,33 @@
+$var : 100vw;
+
+.dialog{
+  width: calc($var/5);
+  height: calc($var/10);
+  margin: calc($var/40);
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc($var/70);
+}
+
+.score{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc($var/100);
+}
+
+.homeButton{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: calc($var/40);
+  width: calc($var/20);
+  height: calc($var/30);
+  border-radius: 5px;
+  font-size: calc($var/100);
+}
