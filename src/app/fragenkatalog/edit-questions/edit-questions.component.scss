@@ -1,0 +1,67 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.fragen-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fragen {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  max-width: 25%;
+  margin: 0.5%;
+  margin-bottom: 2%;
+  padding: 2%;
+  flex: 1 0 30%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px;
+}
+
+.input-group label {
+  margin-right: 10px;
+  width: 150px;
+}
+
+.input-group input {
+  flex-grow: 1;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  margin: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loeschen {
+  border-radius: 50px;
+  width: 10px;
+  height: 10px;
+  padding: 0px;
+}
