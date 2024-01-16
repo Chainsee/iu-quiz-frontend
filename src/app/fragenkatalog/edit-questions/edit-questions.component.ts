@@ -15,7 +15,7 @@ export class EditQuestionsComponent {
   message: any;
   choosenCategory: any;
   formArray!: FormArray;
-  kategorie: any;
+  category: any;
 
   constructor(
     private route: ActivatedRoute,
