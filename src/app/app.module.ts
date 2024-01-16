@@ -19,14 +19,14 @@ import { DialogComponent } from './game/dialog/dialog.component';
 import { QuestionDialogComponent } from './fragenkatalog/question-dialog/question-dialog.component';
 import { EditQuestionsComponent } from './fragenkatalog/edit-questions/edit-questions.component';
 import { CategoryDialogComponent } from './fragenkatalog/category-dialog/category-dialog.component';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { LoginComponent } from './start/login/login.component';
 import { RegisterComponent } from './start/register/register.component';
 import { GlobalHeaderComponent } from './global-header/global-header.component';
 import { ScoreComponent } from './home/score/score.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
-import { MultiplayerCategoryComponent } from './game/category-mp/category-mp.component';
+import { RouterModule } from '@angular/router';
 
 registerLocaleData(localeDe, 'de');
 
@@ -41,7 +41,8 @@ registerLocaleData(localeDe, 'de');
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule.forRoot([]),
   ],
   declarations: [
     AppComponent,
@@ -60,8 +61,7 @@ registerLocaleData(localeDe, 'de');
     LoginComponent,
     RegisterComponent,
     GlobalHeaderComponent,
-    ScoreComponent,
-    MultiplayerCategoryComponent
+    ScoreComponent
   ],
   bootstrap: [AppComponent],
 })
