@@ -1,8 +1,0 @@
-<app-global-header></app-global-header>
-<div class="panel">
-  <p class="text">Wähle deine Kategorie</p>
-  <select class="select" [(ngModel)] = "selectedCategory" name = "selectedCategory">
-    <option *ngFor="let category of categories" [value]="category._id">{{category._id}}</option>
-  </select>
-  <button class="button" (click)="getCategory()">Kategorie wählen</button>
-</div>
