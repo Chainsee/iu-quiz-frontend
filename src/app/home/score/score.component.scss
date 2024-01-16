@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tabelle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tabelleMitRand {
+  border-collapse: collapse;
+}
+
+.tabelleMitRand td, .tabelleMitRand th {
+  border: 1px solid black;
+  padding: 10px;
+}

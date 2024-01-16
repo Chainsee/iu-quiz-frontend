@@ -1,0 +1,24 @@
+<body>
+    <section>
+        <form>
+            <h1>Registrieren</h1>
+            <div class="inputbox">
+                <input type="text" name="user" [(ngModel)]="signupObj.username" required>
+                <label>Benutzername</label>
+            </div>
+            <div class="inputbox">
+                <input type="email" name="email" [(ngModel)]="signupObj.email" required>
+                <label>E-Mail</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" name="password" [(ngModel)]="signupObj.password" required>
+                <label>Passwort</label>
+            </div>
+    
+            <button (click)="onSignUp()" >Registrieren</button>
+            
+        </form>
+    </section>
+</body>
+
+   
