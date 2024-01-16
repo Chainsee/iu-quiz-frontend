@@ -19,6 +19,7 @@ export class EditQuestionsComponent {
     private route: ActivatedRoute,
     private formBuilder: FormBuilder,
     private http: HttpClient,
+    private router: Router,
     private authService: AuthService
   ) {}
 
