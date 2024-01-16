@@ -15,19 +15,16 @@ export class EditQuestionsComponent {
   message: any;
   choosenCategory: any;
   formArray!: FormArray;
-  category: any;
 
   constructor(
     private route: ActivatedRoute,
     private formBuilder: FormBuilder,
     private http: HttpClient,
-    private router: Router,
     private authService: AuthService
   ) {}
 
   async ngOnInit() {
     let category = this.route.snapshot.paramMap.get('category');
-    this.category = category;
     this.formArray = this.formBuilder.array([]);
     let posts = async () => {
       let response = await fetch(
@@ -86,7 +83,7 @@ export class EditQuestionsComponent {
       const response = await this.http
         .post('https://iu-quiz-ki0i.onrender.com/posts/newQuestion', item)
         .toPromise();
-    this.router.navigate(['/fragenbearbeiten', this.category]);
+    this.window.location.reload();
     } else {
       alert('Bitte alle Felder korrekt ausfüllen!');
     }
@@ -100,7 +97,7 @@ export class EditQuestionsComponent {
       const response = await this.http
         .put(`https://iu-quiz-ki0i.onrender.com/posts/update/${_id}`, item)
         .toPromise();
-      this.router.navigate(['/fragenbearbeiten', this.category]);
+      this.window.location.reload();
     } else {
       alert('Bitte alle Felder korrekt ausfüllen!');
     }
@@ -112,7 +109,7 @@ export class EditQuestionsComponent {
     const response = await this.http
       .delete(`https://iu-quiz-ki0i.onrender.com/posts/delete/${_id}`)
       .toPromise();
-    this.router.navigate(['/fragenbearbeiten', this.category]);
+    this.window.location.reload();
   }
 
   eingabePruefen(item: any): boolean {
