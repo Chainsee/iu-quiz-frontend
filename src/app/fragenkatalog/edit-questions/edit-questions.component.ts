@@ -15,6 +15,7 @@ export class EditQuestionsComponent {
   message: any;
   choosenCategory: any;
   formArray!: FormArray;
+  kategorie: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,6 +27,7 @@ export class EditQuestionsComponent {
 
   async ngOnInit() {
     let category = this.route.snapshot.paramMap.get('category');
+    this.category = category;
     this.formArray = this.formBuilder.array([]);
     let posts = async () => {
       let response = await fetch(
