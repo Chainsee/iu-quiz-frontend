@@ -14,7 +14,7 @@ export class GameComponent {
   i: number = 0;
   message: any;
   score: any;
-  duration: number = 1000;
+  duration: number = 2000;
   step = 4;
   progress = 0;
   ergebnis = new ergebnis();
