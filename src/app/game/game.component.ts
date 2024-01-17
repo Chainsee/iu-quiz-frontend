@@ -111,6 +111,7 @@ export class GameComponent {
   }
 
   countdown() {
+    clearInterval(this.interval);
     this.progress = 0;
     this.interval = setInterval(() => {
       this.progress += this.step;
