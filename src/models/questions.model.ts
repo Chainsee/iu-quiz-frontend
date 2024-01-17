@@ -8,6 +8,7 @@ export class Question {
     antwort4: string;
   };
   korrekteAntwort: string;
+  user: string;
 
   constructor() {
     this.kategorie = '';
@@ -19,5 +20,6 @@ export class Question {
       antwort4: '',
     };
     this.korrekteAntwort = '';
+    this.user = '';
   }
 }
