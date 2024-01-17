@@ -5,6 +5,7 @@ import { CategoryDialogComponent } from './category-dialog/category-dialog.compo
 import { Question } from '../../models/questions.model';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AuthService } from '../../services/auth.service';
 import * as Papa from 'papaparse';
 
 @Component({
@@ -18,7 +19,8 @@ export class QuestionsComponent {
   constructor(
     private dialog: MatDialog,
     private http: HttpClient,
-    private snackbar: MatSnackBar
+    private snackbar: MatSnackBar,
+    private authService: AuthService
   ) {}
   addCategory() {
     const dialogRef = this.dialog.open(QuestionDialogComponent, {});
@@ -53,6 +55,7 @@ export class QuestionsComponent {
   async speichern() {
     for (let item of this.items) {
       if (this.eingabePruefen(item)) {
+        item.user = this.authService.getCurrentUser()
         const response = await this.http
           .post('https://iu-quiz-ki0i.onrender.com/posts/newQuestion', item, {
             observe: 'response',
